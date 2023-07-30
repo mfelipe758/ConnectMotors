@@ -1,0 +1,73 @@
+// .carros-container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center; 
+//     gap: 20px; 
+//     margin: 0 auto; 
+//   }
+  
+//   .carros-list {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     width: 100%;
+//   }
+  
+//   .carro-item {
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     padding: 10px;
+//     flex-basis: calc(20% - 20px); 
+//     max-width: calc(20% - 20px); 
+//     box-sizing: border-box; 
+//     display: flex;
+//     flex-direction: column;
+//     margin-bottom: 15px;
+//   }
+  
+//   .carro-info {
+//     flex: 1;
+//   }
+  
+//   .carro-image {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-bottom: 10px;
+//   }
+  
+//   .foto {
+//     max-width: 100%;
+//     border-radius: 6px;
+//   }
+//   @media screen and (max-width: 530px) {
+//     .carro-item {
+//       flex-basis: 100%; 
+//       max-width: 100%; 
+//     }
+// }
+// @media screen and (min-width: 531px) and (max-width: 800px) {
+//   .carro-item {
+//     flex-basis: calc(50% - 20px); 
+//     max-width: calc(50% - 20px); 
+//   }
+// }
+  
+//   @media screen and (min-width: 801px) and (max-width: 1030px) {
+//     .carro-item {
+//       flex-basis: calc(33.33% - 20px); 
+//       max-width: calc(33.33% - 20px); 
+//     }
+//   }
+
+//   @media screen and (min-width: 1031px) and (max-width: 1290px) {
+//     .carro-item {
+//       flex-basis: calc(25% - 20px); 
+//       max-width: calc(25% - 20px); 
+//     }
+//   }
+  
+  
