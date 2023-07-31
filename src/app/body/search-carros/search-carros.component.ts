@@ -3,7 +3,7 @@ import { CarroService } from '../carro.service';
 import { Carro } from 'src/app/shared/models/carro.model';
 import { FormControl, Validators } from '@angular/forms';
 import { Subject, take, debounceTime, filter, distinctUntilChanged, pipe } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ReserveComponent } from '../reserve/reserve.component';
 
 
@@ -23,14 +23,24 @@ export class SearchCarrosComponent implements OnInit{
   searchControl = new FormControl('', Validators.minLength(3));
  
   constructor(private service: CarroService, 
-    // private reserveComponent: ReserveComponent
+    private router: Router
     )
      {}
 
  
-  // chamarFuncaoNoComponenteB(searchValue: Carro) {
-  //   this.reserveComponent.adicionarCarro(searchValue);
-  // }
+
+  reservarCarro(carro: Carro) {
+    // if(sessionStorage.getItem('auth') === 'false'){
+
+    // }
+    this.router.navigate(['/login']);
+    if(sessionStorage.getItem('auth')==='true'){
+      
+      this.service.addCarroReservado(carro).subscribe(resp => console.log(resp));
+      //router navigate para reserve
+    }
+    
+  }
 
   ngOnInit() {
     this.getCarros();
@@ -40,6 +50,7 @@ export class SearchCarrosComponent implements OnInit{
         this.searchControl.markAsTouched();
       });      
   }
+  
  
   getCarros(value: string = '') {
       this.service.searchCarros(value).pipe(take(1)).subscribe(carros => {

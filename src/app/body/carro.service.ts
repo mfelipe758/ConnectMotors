@@ -43,11 +43,13 @@ export class CarroService {
   //   return this.http.post<Carro>(`${this.apiUrl}/${carroId}`, {});
   // }
   
-  addCarroReservado(carro: Carro): void {
+  addCarroReservado(carro: Carro) : Observable<Carro>{
+    carro.disponivel = false;
     this.carrosReservados.push(carro);
     this.ultimoCarroReservado = carro;
     this.carrosReservadosSubject.next(this.carrosReservados);
-  
+    return this.http.put<Carro>(`${this.apiUrl}/${carro.id}`, this.ultimoCarroReservado);
+
   }
 
   getCarrosReservados(): Observable<Carro[]> {

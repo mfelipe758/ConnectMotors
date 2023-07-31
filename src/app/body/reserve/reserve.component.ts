@@ -20,12 +20,9 @@ export class ReserveComponent {
   constructor(private service: CarroService,
     // private dialog: MatDialog
     ) {
-      this.ultimoCarroReservado = this.service.getUltimoCarroReservado();
+
     }
-    adicionarCarro(searchValue: Carro) {
-      this.service.addCarroReservado(searchValue);
-      this.ultimoCarroReservado = this.service.getUltimoCarroReservado();
-    }
+   
 
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(DialogExitPageComponent);

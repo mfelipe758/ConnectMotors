@@ -52,8 +52,7 @@
           <p><strong>Valor:</strong> {{ carro.valor | currency:'BRL' }}</p>
           <button mat-flat-button color="primary"
           [disabled]="!carro.disponivel"
-          
-          routerLink="/login"
+          (click)="reservarCarro(carro)"
           > 
             {{ carro.disponivel ? 'Reservar': 'Reservado'}} </button>
         </div>

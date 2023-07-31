@@ -22,7 +22,7 @@
       "detalhes": "Suv, 1.6L, Flex, Aut",
       "valor": 91990,
       "foto": "https://resized-images.autoconf.com.br/600x450/filters:format(webp)/veiculos/fotos/293189/07cc92b7-6052-41ba-8e61-27bc2709f3b0.jpg",
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": 3,
@@ -58,7 +58,7 @@
       "detalhes": "Hatch, 1.0L, Flex, Mec",
       "valor": 78990,
       "foto": "https://resized-images.autoconf.com.br/600x450/filters:format(webp)/veiculos/fotos/296413/0b745b6d-0cb1-4f3b-ab9b-8ea914a0d8c0.jpg",
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": 6,
@@ -191,7 +191,6 @@
       "valor": 47990,
       "foto": "https://resized-images.autoconf.com.br/600x450/filters:format(webp)/veiculos/fotos/258721/aa805bf3-f5ee-4900-8228-234645f30afb.jpg",
       "disponivel": true
-
     },
     {
       "id": 17,
@@ -242,7 +241,7 @@
       "disponivel": false
     },
     {
-      "id": 20,
+      "id": 21,
       "marca": "Jeep",
       "modelo": "Renegade",
       "ano": 2016,
@@ -251,12 +250,19 @@
       "detalhes": "Suv, 1.8L, Flex, Aut",
       "valor": 77990,
       "foto": "https://resized-images.autoconf.com.br/600x450/filters:format(webp)/veiculos/fotos/276629/4be86131-537d-432d-9adb-039eee84f725.jpg",
-      "disponivel": true
+      "disponivel": false
     }
   ],
-    "users": [
-      { "id": 1, "username": "teste@teste", "password": "123456" },
-      { "id": 2, "username": "teste2@teste", "password": "123456" }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": 1,
+      "username": "teste@teste",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "username": "teste2@teste",
+      "password": "123456"
+    }
+  ]
+}

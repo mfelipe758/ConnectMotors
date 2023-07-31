@@ -6,6 +6,7 @@ import { ReserveComponent } from "./reserve/reserve.component";
 
 const routes: Routes = [
     {path: 'search', component: SearchCarrosComponent},
+    // {path: 'search/:id', component: SearchCarrosComponent},
     {path: 'reserve', component: ReserveComponent},
     {path: '**', component: PageNotFoundComponent},
 ];

@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { take } from 'rxjs';
 import { Auth } from '../shared/models/auth.model';
+import { MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -13,16 +14,17 @@ import { Auth } from '../shared/models/auth.model';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  showPassword = false;
-
-  loginForm: FormGroup;
-
   constructor(
     private fb: FormBuilder,
     private service: LoginService,
     private toast: ToastrService,
-    private router: Router
+    private router: Router,
+    // private snackBar: MatSnackBar
   ) {}
+  showPassword = false;
+
+  loginForm: FormGroup;
+
 
   ngOnInit(): void {
     this.createForm();
@@ -43,7 +45,7 @@ export class LoginComponent implements OnInit {
       .pipe(take(1))
       .subscribe({
         next: (value) => {
-          localStorage.setItem('auth', String(value.auth));
+          sessionStorage.setItem('auth', 'true');
           this.router.navigate(['/reserve']);
         },
         error: (err: HttpErrorResponse) => {
